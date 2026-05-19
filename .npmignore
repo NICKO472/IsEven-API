@@ -1,0 +1,4 @@
+node_modules
+Debugs/
+*.log
+start.js

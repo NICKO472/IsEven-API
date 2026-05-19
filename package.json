@@ -1,0 +1,15 @@
+{
+  "name": "num-parity-core",
+  "version": "1.1.8",
+  "description": "Simple package to check if a number is even or odd",
+  "main": "index.js",
+  "keywords": [
+    "even",
+    "odd",
+    "parity",
+    "number",
+    "checker"
+  ],
+  "author": "Nikinho",
+  "license": "MIT"
+}
