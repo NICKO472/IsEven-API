@@ -1,17 +1,32 @@
-function isEven(number) {
-  if (typeof number !== "number") {
-    throw new Error("O valor precisa ser um número");
+const MAX = Number.MAX_SAFE_INTEGER;
+const MIN = Number.MIN_SAFE_INTEGER;
+
+function isEven(value) {
+  const num = Number(value);
+
+  if (!Number.isFinite(num)) {
+    throw new Error("Valor inválido");
   }
 
-  return number % 2 === 0;
+  if (num > MAX || num < MIN) {
+    throw new Error("Número fora do limite seguro do JavaScript");
+  }
+
+  return num % 2 === 0;
 }
 
-function parity(number) {
-  if (typeof number !== "number") {
-    throw new Error("O valor precisa ser um número");
+function parity(value) {
+  const num = Number(value);
+
+  if (!Number.isFinite(num)) {
+    throw new Error("Valor inválido");
   }
 
-  return number % 2 === 0 ? "even" : "odd";
+  if (num > MAX || num < MIN) {
+    throw new Error("Número fora do limite seguro do JavaScript");
+  }
+
+  return num % 2 === 0 ? "even" : "odd";
 }
 
 module.exports = {
